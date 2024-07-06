@@ -184,7 +184,6 @@ const SearchContent = () => {
             >
               Search New stock
             </button>
-            <button>Add to Watchlist</button>
             <button onClick={showModal}>Add to Dashboard</button>
           </div>
         </>
