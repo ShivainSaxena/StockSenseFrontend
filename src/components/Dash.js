@@ -52,8 +52,11 @@ const Dashboard = ({ dashStocks, updateDashStocks }) => {
       if (stock?.type === "graph" && (item.w !== 2 || item.h !== 2)) {
         return { ...item, w: 2, h: 2 };
       }
-      if (stock?.type === "widget" && (item.w !== 1 || item.h !== 1)) {
-        return { ...item, w: 1, h: 1 };
+      if (
+        stock?.type === "widget" &&
+        ((isPhone && item.w !== 2) || item.w !== 1 || item.h !== 1)
+      ) {
+        return { ...item, w: isPhone ? 2 : 1, h: 1 };
       }
       return item;
     });

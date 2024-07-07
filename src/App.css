@@ -649,12 +649,12 @@ tr:hover {
 
 .legend {
   position: absolute;
-  right: 40px;
+  left: 90px;
   color: var(--sub_text_color);
   background-color: var(--secondary_bg);
   padding: 10px;
   z-index: 3;
-  max-width: 105px;
+  max-width: 110px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -958,7 +958,7 @@ tr:hover {
     background-color: var(--secondary_bg);
     padding: 10px;
     z-index: 3;
-    max-width: 105px;
+    max-width: 110px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;

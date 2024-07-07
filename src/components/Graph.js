@@ -6,8 +6,10 @@ import MediaQuery from "react-responsive";
 const Graph = ({ data: s }) => {
   const { state } = useStockContext();
 
-  const getMin = (data) => Math.min(...data.map((d) => parseFloat(d.close)));
-  const getMax = (data) => Math.max(...data.map((d) => parseFloat(d.close)));
+  const getMin = (data) =>
+    parseInt(Math.min(...data.map((d) => parseFloat(d.close))));
+  const getMax = (data) =>
+    parseInt(Math.max(...data.map((d) => parseFloat(d.close))));
 
   const matchedObject = state.find((o) => o.Symbol === s.symbol);
 

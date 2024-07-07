@@ -9,7 +9,6 @@ export const useSignup = () => {
   const navigate = useNavigate();
   const { dispatch } = useAuthContext();
   const { fillstocks } = useFillStocks();
-  const apiUrl = process.env.REACT_APP_API_URL;
 
   const signup = async (email, password, validPass) => {
     if (!validPass) {
@@ -18,7 +17,7 @@ export const useSignup = () => {
     }
     setIsLoading(true);
     setError(null);
-    const response = await fetch(`${apiUrl}/api/auth/sign-up`, {
+    const response = await fetch(`/api/auth/sign-up`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

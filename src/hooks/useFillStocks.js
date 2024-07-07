@@ -2,10 +2,9 @@ import { useStockContext } from "./useStockContext";
 
 export const useFillStocks = () => {
   const { dispatch } = useStockContext();
-  const apiUrl = process.env.REACT_APP_API_URL;
 
   const fillstocks = async (token) => {
-    const response = await fetch(`${apiUrl}/api/stock/all-symbols`, {
+    const response = await fetch(`/api/stock/all-symbols`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
