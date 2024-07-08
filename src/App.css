@@ -169,7 +169,8 @@ a {
 }
 
 .form-container {
-  height: 70dvh;
+  margin-top: clamp(4.688rem, 3.125rem + 7.813vw, 12.5rem);
+  margin-bottom: 75px;
   display: flex;
   justify-content: center;
   align-items: center;
